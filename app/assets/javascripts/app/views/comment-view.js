@@ -6,6 +6,13 @@
     render: function () {
       var newCommentHtml = this.template( this.model.toJSON() );
       $(this.el).html(newCommentHtml);
+    },
+    events: {
+    'click .delete': 'deleteComment'
+    },
+    deleteComment : function (e) {
+      e.preventDefault();
+    this.model.destroy();
     }
   });
 
