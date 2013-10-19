@@ -22,7 +22,7 @@
     deleteComment : function (e) {
       e.preventDefault();
     this.model.destroy();
-    },
+    }
 
   });
 
