@@ -19,9 +19,9 @@
     <div class="panel">
       <h3>Cast Your Vote!</h3>
       <form class="new-comment">
-        <label>Username</label>
-        <input name="username" type="text" />
-
+        
+        <input name="username" type="hidden" val="<%=current_user.email%>" />
+       
         <label>Vote</label>
         <select name="side">
           <option value="left">Left Side</option>
@@ -30,7 +30,7 @@
 
         <label>Comment</label>
         <textarea name="comment"></textarea>
-
+        
         <input type="submit" value="Vote and Comment!" />
       </form>
     </div>
